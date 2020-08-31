@@ -11,5 +11,4 @@ class Database {
   }
 }
 
-// module.exports = new Database('mongodb://root:root@localhost');
 module.exports = new Database('mongodb+srv://lucas:lucas@cluster0.cgpqh.mongodb.net/aeactivity');

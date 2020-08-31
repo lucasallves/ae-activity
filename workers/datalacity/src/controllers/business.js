@@ -9,10 +9,7 @@ class BusinessController extends Controller {
 
     try {
       const businessModel = new BusinessModel();
-      const { insertedIds, insertedCount } = await businessModel.insertMany(businesses);
-
-      console.log('INSERTED IDS 123:', insertedCount);
-
+      const { insertedIds } = await businessModel.insertMany(businesses);
       return insertedIds;
     } catch (err) {
       console.log('ERR:', err);

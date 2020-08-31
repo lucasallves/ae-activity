@@ -6,7 +6,7 @@ import BusinessTypeSelector from '../../components/BusinessTypeSelector';
 const Dashboard: React.FC = () => {
   return (
     <Page>
-      <Title text="All Businesses" />
+      <Title text="Dashboard" />
       <BusinessTypeSelector />
     </Page>
   );
