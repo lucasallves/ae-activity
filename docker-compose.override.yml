@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  backend:
+    ports:
+      - 3333:3000
+    environment:
+      - NODE_ENV=development
+    command: npm run start:dev
+    build:
+      context: ./backend
+      dockerfile: DockerfileDev
+    volumes:
+      - ./backend/src:/srv/www/api.aeactivity.com/src:rw
+      - ./backend/package.json:/srv/www/api.aeactivity.com/package.json:rw
+
+  datalacity:
+    ports:
+      - 3334:3000
+    environment:
+      - NODE_ENV=development
+    command: npm run start:dev
+    build:
+      context: ./workers/datalacity
+      dockerfile: DockerfileDev
+    volumes:
+      - ./workers/datalacity/src:/srv/www/workers.datalacity.com/src:rw
+      - ./workers/datalacity/package.json:/srv/www/workers.datalacity.com/package.json:rw

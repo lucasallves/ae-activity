@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  backend:
+    container_name: aeactivity-backend
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+
+  datalacity:
+    container_name: datalacity-worker
+    restart: always
+    build:
+      context: ./workers/datalacity
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production

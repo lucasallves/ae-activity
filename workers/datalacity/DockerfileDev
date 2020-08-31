@@ -1,0 +1,15 @@
+FROM node:12.16-slim
+
+RUN apt update
+RUN npm i -g wait-on
+
+WORKDIR /srv/www/workers.datalacity.com
+
+COPY . .
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD npm run start:dev
+# ENTRYPOINT wait-on tcp:database:27017 && npm run start:dev
