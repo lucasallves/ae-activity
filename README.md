@@ -59,5 +59,5 @@ and check out the `build` folder.
 - MongoDB
 
 ## Assumptions
-- Since the Lacity Data was not a possibility, I decided to sync the data in a local mongo database. To do that I created a worker that runs once a day at night.
+- Since the API filters was not a possibility, I decided to sync the data in a local mongo database. To do that I created a worker that runs once a day at night.
 - To facilitate the demonstration, I'm using MongoDB's `Atlas cloud service`.
