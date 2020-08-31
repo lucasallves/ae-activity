@@ -39,8 +39,6 @@ yarn build
 ```
 and check out the `build` folder.
 
-<br/>
-
 ## Technologies
 
 **Frontend:**<br/>
